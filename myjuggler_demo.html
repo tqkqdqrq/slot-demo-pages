@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スロットデータステーション</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Hiragino Sans', sans-serif; background: #1a1a2e; color: #e0e0e0; font-size: 14px; }
+  .header { background: linear-gradient(135deg, #16213e, #0f3460); padding: 12px 16px; border-bottom: 2px solid #e94560; }
+  .header h1 { font-size: 16px; color: #fff; }
+  .header .sub { font-size: 11px; color: #aaa; margin-top: 2px; }
+  .info-bar { background: #16213e; padding: 8px 16px; display: flex; gap: 12px; font-size: 12px; color: #ccc; border-bottom: 1px solid #333; }
+  .info-bar .label { color: #e94560; font-weight: bold; }
+  .tabs { display: flex; background: #0f3460; overflow-x: auto; }
+  .tabs .tab { padding: 8px 16px; font-size: 12px; color: #888; white-space: nowrap; border-bottom: 2px solid transparent; }
+  .tabs .tab.active { color: #fff; border-bottom-color: #e94560; background: #16213e; }
+  .tabs .tab.selected { color: #e94560; }
+  .date-tabs { display: flex; background: #111; padding: 4px 8px; gap: 4px; overflow-x: auto; }
+  .date-tabs span { padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #888; white-space: nowrap; }
+  .date-tabs span.active { background: #e94560; color: #fff; }
+  table { width: 100%; border-collapse: collapse; margin: 0; }
+  th { background: #16213e; color: #e94560; padding: 8px 6px; font-size: 11px; text-align: center; border-bottom: 1px solid #333; position: sticky; top: 0; }
+  td { padding: 7px 6px; text-align: center; font-size: 13px; border-bottom: 1px solid #222; }
+  tr:nth-child(even) { background: rgba(255,255,255,0.03); }
+  .machine-num { font-size: 18px; font-weight: bold; color: #e94560; }
+  .bb { color: #ff6b6b; font-weight: bold; }
+  .rb { color: #4ecdc4; font-weight: bold; }
+  .prob { color: #ffd93d; font-size: 11px; }
+  .highlight { background: rgba(233, 69, 96, 0.1); }
+  .summary { background: #16213e; padding: 12px 16px; margin: 8px; border-radius: 8px; border: 1px solid #333; }
+  .summary .row { display: flex; justify-content: space-between; padding: 4px 0; }
+  .summary .val { font-weight: bold; font-size: 15px; }
+  .container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #main_div { display: flex; width: max-content; }
+  #main_div > .item { min-width: 100vw; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>グランドホール新宿</h1>
+  <div class="sub">マイジャグラーV ｜ 4月10日 データ</div>
+</div>
+
+<div class="info-bar">
+  <span><span class="label">台番号:</span> 456</span>
+  <span><span class="label">機種:</span> マイジャグラーV</span>
+  <span class="active selected">当日</span>
+</div>
+
+<div class="date-tabs">
+  <table style="display:none"><tr>
+    <td>4/4</td><td>4/5</td><td>4/6</td><td>4/7</td><td>4/8</td><td>4/9</td><td>4/10</td>
+  </tr></table>
+  <span>4/4</span><span>4/5</span><span>4/6</span><span>4/7</span><span>4/8</span><span>4/9</span><span class="active">4/10</span>
+</div>
+
+<div class="container">
+<div id="main_div">
+
+<!-- Day 1: 4/4 -->
+<div class="item">
+<table>
+  <tr><th>台番号</th><th>累計ゲーム</th><th>BB</th><th>RB</th><th>合算確率</th></tr>
+  <tr><td class="machine-num">456</td><td>7,832</td><td class="bb">31</td><td class="rb">34</td><td class="prob">1/120.5</td></tr>
+</table>
+</div>
+
+<!-- Day 2: 4/5 -->
+<div class="item">
+<table>
+  <tr><th>台番号</th><th>累計ゲーム</th><th>BB</th><th>RB</th><th>合算確率</th></tr>
+  <tr><td class="machine-num">456</td><td>8,215</td><td class="bb">35</td><td class="rb">30</td><td class="prob">1/126.4</td></tr>
+</table>
+</div>
+
+<!-- Day 3: 4/6 -->
+<div class="item">
+<table>
+  <tr><th>台番号</th><th>累計ゲーム</th><th>BB</th><th>RB</th><th>合算確率</th></tr>
+  <tr><td class="machine-num">456</td><td>6,540</td><td class="bb">28</td><td class="rb">26</td><td class="prob">1/121.1</td></tr>
+</table>
+</div>
+
+<!-- Day 4: 4/7 -->
+<div class="item">
+<table>
+  <tr><th>台番号</th><th>累計ゲーム</th><th>BB</th><th>RB</th><th>合算確率</th></tr>
+  <tr><td class="machine-num">456</td><td>9,120</td><td class="bb">38</td><td class="rb">40</td><td class="prob">1/116.9</td></tr>
+</table>
+</div>
+
+<!-- Day 5: 4/8 -->
+<div class="item">
+<table>
+  <tr><th>台番号</th><th>累計ゲーム</th><th>BB</th><th>RB</th><th>合算確率</th></tr>
+  <tr><td class="machine-num">456</td><td>7,650</td><td class="bb">32</td><td class="rb">33</td><td class="prob">1/117.7</td></tr>
+</table>
+</div>
+
+<!-- Day 6: 4/9 -->
+<div class="item">
+<table>
+  <tr><th>台番号</th><th>累計ゲーム</th><th>BB</th><th>RB</th><th>合算確率</th></tr>
+  <tr><td class="machine-num">456</td><td>8,430</td><td class="bb">36</td><td class="rb">35</td><td class="prob">1/118.7</td></tr>
+</table>
+</div>
+
+<!-- Day 7: 4/10 (当日) -->
+<div class="item">
+<table>
+  <tr><th>台番号</th><th>累計ゲーム</th><th>BB</th><th>RB</th><th>合算確率</th></tr>
+  <tr class="highlight"><td class="machine-num">456</td><td>8,056</td><td class="bb">33</td><td class="rb">35</td><td class="prob">1/118.5</td></tr>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class="summary">
+  <div class="row"><span>本日 BB</span><span class="val bb">33回 (1/244.1)</span></div>
+  <div class="row"><span>本日 RB</span><span class="val rb">35回 (1/230.2)</span></div>
+  <div class="row"><span>合算</span><span class="val" style="color:#ffd93d">68回 (1/118.5)</span></div>
+  <div class="row"><span>累計ゲーム</span><span class="val">8,056G</span></div>
+</div>
+
+<p style="text-align:center; padding:16px; font-size:10px; color:#555;">4月10日 ｜ スロットデータステーション</p>
+
+</body>
+</html>
